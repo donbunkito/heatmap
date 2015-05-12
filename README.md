@@ -1,14 +1,13 @@
 # Heatmap 1.1
 orig author: jjguy
 modified by: chucknthem
-This is fork of heatmap by jjguy. It's about 30 times faster than the original version 1.0.
+This is a fork of chucknthem itself being a fork of of heatmap by jjguy. 
+https://github.com/chucknthem/heatmap
 
 ## Description
 heatmap is a python library for creating heatmaps.
 
-Works with gps coordinates and generates KML files for overlaying heatmaps on Google Earth.
-
-Full documentation at http://jjguy.com/heatmap
+Works with gps coordinates and generates point sets for retrieving correctly adjusted static maps from GoogleMaps.
 
 See Also: http://code.google.com/p/gheat/
 
@@ -26,21 +25,18 @@ Either clone this git repo or download the source. Then install it as a normal p
 ### Generating a time sequenced heat map for Google Earth.
 
     hm = heatmap.Heatmap() 
-    hm.animated_heatmapKML(
+    hm.plot(
       pointsets, 
       outputfile, 
-      opacity=128,
-      dotsize=150, 
-      size=(2048, 2048),
+      opacity=128, 
+      size=(2048 ?, 2048 ?),
       scheme="classic") 
 
 Most parameters are the same as the heatmap() function described below. The only difference is the 'pointset' parameter which is defined as follows:
 
     pointset = [(begin, end, [lat, lng]), (begin, end, [lat, lng]), ...]
 
-where begin and end are dates in the format yyyy-mm-dd
-
-This will generate a single .kml file and n = len(pointset) .png files.
+This will generate  n = len(pointset) .png-files.
 
 ## Original documentation from http://jjguy.com/heatmap/
 
@@ -93,8 +89,6 @@ This will generate a single .kml file and n = len(pointset) .png files.
 
 The original readme is below:
 =============================================
-heatmap 1.0
-jjg@case.edu
 
 Build heatmaps in python.  Requires the Python Imaging Library.
 
