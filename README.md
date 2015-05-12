@@ -22,7 +22,7 @@ Either clone this git repo or download the source. Then install it as a normal p
  2. Fixed an issue with points at the border of the heatmap being clipped.
  3. Allows generating a time sequenced kml file for visualising heatmaps over time.
 
-### Generating a time sequenced heat map for Google Earth.
+### Generating a heat map for static googlemaps.
 
     hm = heatmap.Heatmap() 
     hm.plot(
@@ -76,7 +76,7 @@ This will generate  n = len(pointset) .png-files.
         hm = heatmap.Heatmap()
         hm.heatmap(pts, "classic.png")
 
-### Creating a heatmap for google earth:
+### Creating a heatmap for static googlemaps:
 
     import heatmap
     import random
